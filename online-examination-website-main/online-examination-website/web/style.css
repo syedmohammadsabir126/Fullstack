@@ -1,0 +1,46 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0; font-family: Arial, Helvetica, sans-serif; color: #1f2937;
+  background: #f1f5f9; line-height: 1.5;
+}
+.topbar { background: #173b67; color: white; text-align: center; padding: 25px 16px; }
+.topbar h1 { margin: 0; font-size: 27px; }
+.topbar p { margin: 5px 0 0; color: #dbeafe; }
+.container { width: min(850px, 92%); margin: 32px auto; min-height: 65vh; }
+.panel {
+  background: white; padding: 28px; border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(15, 23, 42, .08); margin-bottom: 20px;
+}
+h2 { margin-top: 0; color: #173b67; }
+.muted { color: #64748b; margin-top: -5px; }
+label { display: block; font-weight: 600; margin: 16px 0 6px; }
+input[type="text"] {
+  width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 7px; font-size: 16px;
+}
+button {
+  border: 0; background: #1761a0; color: white; padding: 12px 20px;
+  border-radius: 7px; font-size: 16px; cursor: pointer; margin-top: 20px;
+}
+button:hover { background: #104b7d; }
+button:disabled { opacity: .65; cursor: wait; }
+.hidden { display: none; }
+.exam-heading { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.timer-box {
+  min-width: 125px; padding: 10px 14px; border-radius: 8px;
+  background: #eff6ff; text-align: center; color: #173b67;
+}
+.timer-box span { display: block; font-size: 12px; }
+.timer-box strong { font-size: 25px; font-variant-numeric: tabular-nums; }
+.instruction { background: #f8fafc; padding: 10px 12px; border-left: 4px solid #1761a0; }
+.question { padding: 17px 0; border-bottom: 1px solid #e2e8f0; }
+.question h3 { font-size: 17px; margin: 0 0 10px; }
+.option { display: flex; gap: 9px; align-items: center; padding: 5px 0; cursor: pointer; }
+.option input { accent-color: #1761a0; }
+.score { font-size: 38px; font-weight: 700; color: #1761a0; margin: 15px 0; }
+.status { color: #b45309; text-align: center; min-height: 24px; }
+footer { text-align: center; padding: 18px; color: #64748b; font-size: 13px; }
+@media (max-width: 600px) {
+  .panel { padding: 20px; }
+  .exam-heading { align-items: flex-start; flex-direction: column; }
+  .topbar h1 { font-size: 22px; }
+}

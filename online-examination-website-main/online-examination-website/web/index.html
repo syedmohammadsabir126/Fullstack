@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Examination</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>Online Examination Portal</h1>
+    <p>Student assessment system</p>
+  </header>
+
+  <main class="container">
+    <section id="loginPanel" class="panel">
+      <h2>Student Login</h2>
+      <p class="muted">Enter your details to begin the examination.</p>
+      <form id="loginForm">
+        <label for="studentName">Student Name</label>
+        <input id="studentName" name="studentName" type="text" placeholder="Enter your name" required>
+        <label for="rollNumber">Roll Number</label>
+        <input id="rollNumber" name="rollNumber" type="text" placeholder="Enter your roll number" required>
+        <button type="submit">Start Examination</button>
+      </form>
+    </section>
+
+    <section id="examPanel" class="panel hidden">
+      <div class="exam-heading">
+        <div>
+          <h2>Multiple-Choice Examination</h2>
+          <p id="studentInfo" class="muted"></p>
+        </div>
+        <div class="timer-box">
+          <span>Time Remaining</span>
+          <strong id="timer">05:00</strong>
+        </div>
+      </div>
+      <p class="instruction">Select one answer for each question. You can submit before the timer ends.</p>
+      <form id="examForm">
+        <div id="questions"></div>
+        <button id="submitButton" type="submit">Submit Examination</button>
+      </form>
+    </section>
+
+    <section id="resultPanel" class="panel hidden" aria-live="polite">
+      <h2>Examination Result</h2>
+      <p id="resultStudent" class="muted"></p>
+      <div class="score" id="score"></div>
+      <p id="resultMessage"></p>
+      <button type="button" id="restartButton">Back to Login</button>
+    </section>
+    <p id="statusMessage" class="status" role="status"></p>
+  </main>
+
+  <footer>Online Examination Website · HTML, CSS, JavaScript and Java</footer>
+  <script src="app.js"></script>
+</body>
+</html>
